@@ -17,13 +17,14 @@ class ArticleConditions extends Controller {
 			$arrCondition = array_map('trim', explode(',', $strCondition));
 			foreach($arrCondition as $strParam) {
 				list($strParam, $strValue) = array_map('urldecode', explode('=', $strParam, 2));
-				$blnNegate = isset($strValue) ? substr($strParam, -1) == '!' : $strParam[0] == '!';
 				
 				if(isset($strValue)) {
 					$blnNegate = substr($strParam, -1) == '!';
+					$blnNegate && $strParam = substr($strParam, 0, -1);
 					$blnMatch = $_GET[$strParam] == $strValue;
 				} else {
 					$blnNegate = $strParam[0] == '!';
+					$blnNegate && $strParam = substr($strParam, 1);
 					$blnMatch = isset($_GET[$strParam]);
 				}
 				
