@@ -3,6 +3,10 @@
 class ArticleConditions extends Controller {
 	
 	public function hookGetArticle($objArticle) {
+		if(!$objArticle->published) {
+			return;
+		}
+		
 		$arrConditions = deserialize($objArticle->bbit_art_cond, true);
 		foreach($arrConditions as $arrRow) {
 			$strCondition = trim($arrRow['condition']);
