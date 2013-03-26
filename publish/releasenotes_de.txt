@@ -1,0 +1,26 @@
+=== Titel
+Artikelbedingungen
+
+
+=== Suchbegriffe
+artikel,bedingungen,auto_item,hide,reader
+
+
+=== Teaser
+Artikel nur dann anzeigen, wenn die URL Parameter bestimmte Bedingungen erfüllen.
+
+
+=== Beschreibung
+
+
+
+=== Freigabe-Notizen und Änderungs-Log
+<p>siehe Handbuch-Link</p>
+
+
+=== Handbuch-Link
+https://github.com/backbone87/backboneit_article_conditions/issues
+
+
+=== Forum-Link
+
